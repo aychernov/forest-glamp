@@ -109,19 +109,20 @@ section:nth-of-type(1n) {
 }
 
 .cta-btn {
-    background-color: transparent;
     border: 2px solid #333;
     padding: 15px 30px;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s;
-}
-
-.cta-btn:hover {
     background-color: #333;
     color: white;
 }
+
+/*.cta-btn:hover {*/
+/*    background-color: #333;*/
+/*    color: white;*/
+/*}*/
 
 /* Gallery Section */
 .gallery {
