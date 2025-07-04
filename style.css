@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+section:nth-of-type(2n) {
+    background-color: rgb(220, 229, 232);
+}
+section:nth-of-type(1n) {
+    background-color: #F4F2ED;
+}
+
+
+/* Header */
+.header {
+    background-color: rgba(255, 255, 255, 0.6); /* полупрозрачный белый */
+    backdrop-filter: blur(10px); /* размытие фона за элементом */
+    -webkit-backdrop-filter: blur(10px); /* для Safari */
+    padding: 20px 0;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* мягкая тень для отделения */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* светлая граница */
+}
+
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #666;
+}
+
+.contact-btn {
+    background-color: transparent;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+    text-align: left;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.cta-btn {
+    background-color: transparent;
+    border: 2px solid #333;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 20px;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.gallery-item {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Main Content Section */
+.main-content {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content-header {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.content-header h2 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.content-header p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+/* Lake View Section */
+.lake-view {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+}
+
+.lake-view-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.lake-view-image {
+    width: 100%;
+    height: 400px;
+    background-image: url('https://images.unsplash.com/photo-1670837301464-514615f7b6f3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.activities {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.activities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.activities h2 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.activity-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.activity-image {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.activity-content h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.activity-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.activity-item.relaxation .activity-image {
+    background-image: url('https://images.unsplash.com/photo-1556882971-3b92cbbe0f02?q=80&w=1072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.activity-item.hiking .activity-image {
+    background-image: url('https://images.unsplash.com/photo-1579551053957-ee77f9b970c7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29vZCUyMGNhbXAlMjBhY2l2aXNpb258ZW58MHwxfDR8fHwy3D');
+}
+
+
+/* Features Section */
+.features {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-image {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+.feature-image:hover {
+transform: scale(1.05);
+transition: transform 0.2s ease-in-out;
+}
+.feature-item h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.feature-item.lakeside .feature-image {
+    background-image: url('https://images.unsplash.com/photo-1671783181591-55f8e18fbb21?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.feature-item.campfire .feature-image {
+    background-image: url('https://images.unsplash.com/photo-1634206813008-d1c2b828c7fd?q=80&w=1626&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.testimonials-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden; /* скрываем выходящие отзывы */
+}
+
+.testimonials-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.testimonials-header {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.testimonials-header h2 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.testimonials-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.testimonial-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 0; /* убираем margin снизу — он теперь не нужен */
+    opacity: 1;
+    background-color: #e8e8e8;
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-right: 10px;
+}
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.testimonial-content {
+    flex: 1;
+}
+
+.testimonial-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonial-navigation {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.nav-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #666;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.nav-arrow:hover {
+    background-color: #333;
+}
+
+.nav-arrow.active {
+    background-color: #333;
+}
+
+/* Final CTA Section */
+.final-cta {
+    padding: 80px 0;
+    background-color: #DCE5E8;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+}
+
+.final-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.final-cta h2 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.final-cta p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.final-cta .cta-btn {
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.final-cta .cta-btn:hover {
+    background-color: #36648B;
+}
+
+/* Footer */
+.footer {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.footer-credit {
+    color: #666;
+}
+
+.footer-credit a {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .content-header h2 {
+        font-size: 28px;
+    }
+}
+
+/* Изначально элементы будут чуть сдвинуты вниз и прозрачны */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.4s ease-out;
+}
+
+/* Когда элемент виден, добавляем класс .animate — он "поднимает" и показывает элемент */
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
